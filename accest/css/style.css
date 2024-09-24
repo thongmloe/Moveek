@@ -108,6 +108,7 @@ body {
 .search-icon {
   font-size: 15px;
   padding: 8px 6px;
+  color: #95aac9;
 }
 
 .input-group .search-input {
@@ -232,19 +233,24 @@ body {
   right: 0;
   bottom: 0;
   z-index: 1;
-  /* display: none; */
-  display: flex;
+  /* display: flex; */
+  display: none;
+  overflow-y: scroll;
 }
 
 .display {
-  display: flex;
+  display: flex !important;
 }
-
 .modal__overlay {
-  position: absolute;
+  /* position: fixed; */
+  position: fixed;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  display: none;
 }
 
 .modal__body-login {
@@ -324,33 +330,104 @@ body {
 
 .modal__body-cinema {
   width: 65%;
-  height: 95%;
-  margin: auto;
+  height: fit-content;
+  margin: 30px auto;
   border-radius: 5px;
   background-color: #fff;
   z-index: 1;
 }
 
+.modal__container-cinema {
+  flex-grow: 1;
+}
+
 .modal__cinema-header {
   display: flex;
   margin: 0 12px;
-  opacity: 0.5;
   padding: 16px 24px;
   align-items: center;
 }
 
 .cinema-search {
   display: flex;
-  border: #333 solid 1px;
+  border: #ddd solid 1px;
   border-radius: 8px;
   align-items: center;
-  padding: 0 4px;
+  padding: 2px 4px;
   margin-right: 20px;
+  width: 150px;
 }
 
 .cinema-search .form-control {
   border: none;
   font-size: 15px;
+  color: #000;
+  opacity: 0.5;
   padding: 8px 0;
   outline: none;
+  background: none;
+  flex-grow: 1;
+  width: 0;
+}
+
+.cinema-location {
+  border: #95aac9 solid 1px;
+
+  width: 225px;
+  border-radius: 5px;
+}
+
+.cinema-location > .location-section {
+  display: block;
+  color: #12263f;
+  font-size: 15px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.modal__cinema-list {
+  padding-top: 8px;
+}
+
+.modal__cinema-item {
+  display: flex;
+  border-top: 1px solid #ddd;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.modal__cinema-img {
+  height: 40px;
+  padding: 0 12px;
+}
+
+.modal__cinema-body {
+  padding: 0 12px;
+  flex-grow: 1;
+  width: 0;
+}
+
+.modal__cinema-info {
+  display: flex;
+  margin-bottom: 3px;
+  align-items: center;
+}
+
+.modal__cinema-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.modal__cinema-status {
+  font-size: 11px;
+  margin-left: 5px;
+  padding: 4px 6px;
+  background: #d5e5fa;
+  color: #2c7be5;
+  border-radius: 7px;
+}
+
+.modal__cinema-address {
+  color: #95aac9;
+  font-size: 13px;
 }

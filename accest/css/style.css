@@ -9,7 +9,7 @@ ul {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -30,10 +30,6 @@ body {
   min-height: 68px;
   background-color: #fff;
   border-bottom: solid 1px #ddd;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 1;
 }
 
@@ -213,16 +209,6 @@ body {
 
 .dropdown-item:hover .dropright-menu {
   display: block;
-}
-
-/* Content */
-#main-content {
-  background-color: #fff;
-  padding-top: 50%;
-  margin-top: 80px;
-  padding-top: 24px;
-  border-top: #ccc solid 1px;
-  border-bottom: #ccc solid 1px;
 }
 
 /* Modal Login  */
@@ -430,4 +416,354 @@ body {
 .modal__cinema-address {
   color: #95aac9;
   font-size: 13px;
+}
+
+/* Content */
+#content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.main-content {
+  padding: 24px 12px;
+}
+
+.content__header {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.film-status:first-child {
+  text-decoration: none;
+  font-size: 20px;
+  color: #12263f;
+  font-weight: 550;
+  padding-right: 24px;
+  border-right: 2px solid #000;
+}
+
+.film-status:first-child:hover {
+  color: #1657af;
+}
+
+.film-status:last-child {
+  text-decoration: none;
+  font-size: 20px;
+  color: #95aac9;
+  font-weight: 550;
+  padding-left: 24px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(8, 120px);
+  column-gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.grid-item {
+  display: inline;
+  border: 1px #ddd solid;
+  border-radius: 10px;
+}
+
+.grid-img {
+  position: relative;
+  width: 100%;
+}
+
+.item-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid-img > label {
+  position: absolute;
+  background-color: #d31602;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #f9fbfd;
+  text-align: center;
+}
+
+.grid-item .item-body {
+  padding: 8px;
+}
+
+.item-name {
+  width: 100px;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #12263f;
+  margin-bottom: 3px;
+}
+
+.item-name:hover {
+  cursor: pointer;
+  color: #1657af;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #95aac9;
+  font-size: 13px;
+}
+
+.item-prefer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item-prefer .item-quantity {
+  padding-left: 3px;
+}
+
+.slide-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-dot button {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #000;
+  opacity: 0.25;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.slide-dot button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Review Film   */
+
+#content .content {
+  display: flex;
+  padding: 0 48px;
+  justify-content: center;
+  margin: 12px;
+  background-color: #f9fbfd;
+}
+
+.content-review {
+  padding: 0 12px;
+  max-width: 66.66667%;
+}
+
+.poster-film {
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.film-info {
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.film-heading {
+  font-size: 24px;
+  color: #12263f;
+  font-weight: 600;
+}
+
+.film-category {
+  display: flex;
+  margin-left: -5px;
+  line-height: 1.5;
+  align-items: center;
+}
+
+.film-category > a,
+.film-category > p {
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+.rate,
+.category {
+  color: #e63757;
+}
+
+.rate:hover,
+.category:hover {
+  color: #b91735;
+}
+
+.film-review,
+.mentor-name,
+.post-time {
+  color: #959595;
+}
+
+.film-review {
+  width: 100%;
+}
+
+/* Review List */
+.content-list-review {
+  padding: 0 12px;
+  border: #e1e1e1 1.5px solid;
+  background-color: #fff;
+  border-radius: 5px;
+  width: calc(100%-66.66667%);
+}
+
+.content-item-review {
+  padding: 12px 12px;
+  border-bottom: #e1e1e1 1.5px solid;
+  margin-left: -5px;
+}
+
+.content-item-review:last-child {
+  border-bottom: none;
+}
+
+.review-name {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c3553;
+  text-decoration: none;
+}
+
+.review-name:hover {
+  color: #010204;
+}
+
+.review-mentor,
+.review-rate {
+  display: inline;
+  text-decoration: none;
+  font-size: 12px;
+  color: #d31602;
+  padding: 0 3px;
+}
+
+.review-time {
+  display: inline;
+  font-size: 12px;
+  color: #959595;
+  padding: 0 3px;
+}
+
+/* Update-List  */
+
+.update-new {
+  max-width: 66.66667%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 12px;
+}
+
+.update-heading {
+  background-color: #edf2f9;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 15px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.text-heading {
+  display: block;
+  padding: 0 24px;
+  font-size: 15px;
+  color: #12263f;
+}
+
+.update-list {
+  padding: 0 24px;
+  border: 1px solid #e1e1e1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.update-item {
+  display: flex;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.update-item:last-child {
+  border-bottom: none;
+}
+
+.img-update {
+  max-width: 33.33333%;
+  flex: 0 0 33.33333%;
+  border-radius: 4px;
+  padding-right: 12px;
+}
+
+.update-body {
+  max-width: 66.66667%;
+  flex: 0 0 66.66667%;
+}
+
+.update-item-heading {
+  font-size: 15px;
+  color: #12263f;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.update-item-info {
+  display: flex;
+  font-size: 13px;
+  color: #95aac9;
+  margin-left: -5px;
+}
+
+.update-item-category,
+.update-item-mentor,
+.update-item-time {
+  padding: 0 5px;
+}
+
+.update-item-category {
+  text-decoration: none;
+  color: #e63757;
+}
+
+.update-item-intro {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #95aac9;
+}
+
+.review-wrapper {
+  max-width: 33.33333%;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+}
+
+.review-item-img {
+  width: 33.33333%;
 }
